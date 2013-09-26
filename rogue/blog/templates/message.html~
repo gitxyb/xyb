@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title%}{% endblock %}
+{% block content %}
+			<div class="span9" id="main2">
+				<div class="hero-unit">
+					<table>
+						<form action="" method="post">{% csrf_token %}
+							<tr><td>留言：</td><td><textarea name="content"></textarea></td></tr>
+							<tr><td><input type="submit" value="提交" class="btn btn-success"/></td></tr>
+						</form>
+					</table>
+ 				</div>	
+			</div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title%}{% endblock %}
+{% block content %}
+			<div class="span9" id="main2">
+				{% for i in m %}
+				<div class="row-fluit">
+					<div class="span2">
+						<img src="/static/{{u.headImg}}" width="50px" height="50px"/>				
+					</div>
+					<div class="span10" id="main3">			
+						<p>{{i.messages}}</p>
+						<p>{{i.time|date:"Y-m-d h:i:m"}}</p>	
+					</div>				
+				</div>
+				<hr />
+				{% endfor %}
+				{% for contact in m.paginator.page_range %}
+				&nbsp;
+				{% if contact == m.number%}
+					{{contact}}
+				{% else %}
+					<a href="?page={{contact}}" style="text-decoration:none">{{contact}}</a>
+				{% endif %}
+				{% endfor %}
+				<div class="pagination">
+					<span class="step-links">
+						{% if m.has_previous %}
+							<a href="?page={{m.previous_page_number}}">上一页</a>
+						{% endif %}
+							<span class="current">
+								Page{{m.number}} of {{m.paginator.num_pages}}.
+							</span>
+						{% if m.has_next %}
+							<a href="?page={{m.next_page_number}}">下一页</a>
+						{% endif %}
+					</span>
+				</div>
+			</div>
+{% endblock %}

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="root" >
+
+    <link href="/static/bootstrap-2.3.2/docs/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/bootstrap-2.3.2/docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/bootstrap-2.3.2/docs/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/bootstrap-2.3.2/docs/assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/bootstrap-2.3.2/docs/assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/static/bootstrap-2.3.2/docs/assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="/static/bootstrap-2.3.2/docs/assets/ico/favicon.png">
+
+    <script src="/static/bootstrap-2.3.2/docs/assets/js/bootstrap-transition.js"></script>
+
+    <script src="/static/bootstrap-2.3.2/docs/assets/js/bootstrap-alert.js"></script>
+    <script src="/static/bootstrap-2.3.2/docs/assets/js/bootstrap-modal.js"></script>
+    <script src="/static/bootstrap-2.3.2/docs/assets/js/bootstrap-dropdown.js"></script>
+    <script src="/static/bootstrap-2.3.2/docs/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="/static/bootstrap-2.3.2/docs/assets/js/bootstrap-tab.js"></script>
+    <script src="/static/bootstrap-2.3.2/docs/assets/js/bootstrap-tooltip.js"></script>
+
+    <script src="/static/bootstrap-2.3.2/docs/assets/js/bootstrap-popover.js"></script>
+    <script src="/static/bootstrap-2.3.2/docs/assets/js/bootstrap-button.js"></script>
+    <script src="/static/bootstrap-2.3.2/docs/assets/js/bootstrap-collapse.js"></script>
+    <script src="/static/bootstrap-2.3.2/docs/assets/js/bootstrap-carousel.js"></script>
+    <script src="/static/bootstrap-2.3.2/docs/assets/js/bootstrap-typeahead.js"></script>
+
+	 <!--<script src="//cdnjs.bootcss.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	 <script src="//cdnjs.bootcss.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>-->
+	 <script src="/static/bootstrap-2.3.2/docs/assets/js/jquery.min.js"></script>
+	 <script src="/static/bootstrap-2.3.2/docs/assets/js/bootstrap.min.js"></script>
+    <script src="/static/bootstrap-2.3.2/docs/assets/js/holder/holder.js"></script>
+    <script>
+		!function ($) {
+ 		$(function(){
+ 		// carousel demo
+ 		$('#myCarousel').carousel()
+ 		})
+ 		}(window.jQuery)
+ 	 </script>
+ 	 <style>
+		#main1{
+			margin-top: 60px;		
+		}
+		#main2{
+			margin-top: 60px;		
+		}
+		#main3{
+			margin-top: 50px;
+		}   
+   </style>
+ 	 <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+		<div class="navbar navbar-inverse navbar-fixed-top">
+      	<div class="navbar-inner">
+      		<div class="container">
+          		<a class="brand" href="/index/">游侠吧</a>
+          		<div class="nav-collapse collapse">
+            		<ul class="nav">
+            			<li class="active"><a href="/index/">主页</a></li>
+            			<li><a href="#about" data-toggle="modal">关于我们</a></li>	
+            			<li><a href="/message/"></a></li>
+            		</ul>
+            	</div>
+					<div class="navbar-form pull-right">
+						<table>
+							<tr>							
+								<td><img src="/static/{{user.u.headImg}}" width="30px;" height="30px;"/></td>
+								<td><h5 style="margin-top: 10px;color:red;">{{user.first_name}}</h5></td>
+								<td><input type="button" value="与我有关" class="btn btn-success" onclick="location.assign('/post_show/{{user.id}}')"/></td>
+								<td><input type="button" value="我参与的" class="btn btn-success" onclick="location.assign('/replay_user_show/{{user.id}}')"/></td>
+								<td><input type="button" value="发帖" class="btn btn-success" onclick="location.assign('/post/{{user.id}}')"/></td>
+								<td><input type="button" value="说说" class="btn btn-success" onclick="location.assign('/post_show/{{user.id}}')"/></td>
+								<td><input type="button" value="登出" onclick="location.assign('/logout/')" class="btn btn-warning" /></td>																					
+							</tr>
+						</table>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<div id="about" class="modal" aria-hidden="true" style="display: none;">
+			<div class="modal-header">
+ 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+ 				<h3 id="myModalLabel">关于我们</h3>
+ 			</div>
+			<div class="modal-body">
+				<p>随着人们生活条件的日益改善，人们对生活的享受欲望越来越渴望，在国家这几年的精神文明建设的推动下，越来越多的人，有了更多的时间和金钱走出家门，去享受这美好时代的所带来的自然景观和人文风光。对了，本网站正是本着服务大众的意念而创建的一个关于旅途游记类网站；本站奔着用户至上的态度，将尽心尽力的服务于大众群体，同时也欢迎个“游侠”们对本网站有什么意见或建议，本网站也会虚心接受，不吝赐教。联系邮箱：15210172316@sina.cn</p>
+			</div>
+ 			<div class="modal-footer">
+ 				<button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+ 			</div>
+ 		</div>
+ 		<div class="container" id="main">
+			<h1 id="main1">游侠吧</h1>
+			<div class="row">
+				<div class="span6">
+					<table>
+						<form action="" method="post" enctype="multipart/form-data" >{% csrf_token %}
+         				<tr><td>请输入用户名：</td><td><input type="text" name="friend" /></td></tr>
+         				<tr><td><input type="submit" value="添加" class="btn btn-success" /></td></tr>
+      				</form>
+      			</table>
+				</div>
+				<div class="span6" id="main2"/>
+					<p>如果已拥有帐号，请直接<a href="/index/" class="btn-warning">登录</a></p>
+				</div>
+			</div> 
+			<div class="container">
+ 			<hr />
+			<footer>
+				<p class="pull-right">
+					<a href="#">Back to top</a>
+				</p>
+				<p>
+					&copy; 2013 Company, Inc. ·
+					<a href="#">Privacy</a>
+					·
+					<a href="#">Terms</a>
+				</p>
+	 		</footer>
+	 	</div>
+</body>
+</html>

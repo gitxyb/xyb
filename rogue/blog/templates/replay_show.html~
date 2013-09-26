@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title%}{% endblock %}
+{% block content %}
+			<div class="span9" id="main2">
+					<img src="/static/{{p.user.u.headImg}}" width="50px" height="50px"/>
+					<h5>{{p.user.first_name}}</h5>
+					<img src="/static/{{p.img}}" alt="" width="200px" height="200px"/>
+					<h2>{{p.title}}</h2>
+					<p>{{p.content}}</p>
+					<p>{{p.time|date:"Y-m-d h:i:m"}}</p>
+					<hr />
+				{% for i in send %}
+				<div class="row-fluit">
+					<div class="span2">
+						<img src="/static/{{i.user.u.headImg}}" width="50px" height="50px"/>				
+					</div>
+					<div class="span10" id="main3">					
+						<p>{{i.content}}</p>
+						<p>{{i.time|date:"Y-m-d h:i:m"}}</p>
+					</div>
+				</div>
+				<hr />
+				{% endfor %}
+			</div>
+{% endblock %}

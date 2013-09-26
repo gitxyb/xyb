@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title%}{% endblock %}
+{% block content %}
+			<div class="span9" id="main2">
+				{% for i in send %}
+				<div class="row-fluit">
+					<div class="span2">
+						<img src="/static/{{user.u.headImg}}" width="50px" height="50px"/>
+						<h5>{{user.first_name}}</h5>				
+					</div>
+					<div class="span10" id="main3">
+						<img class="img-circle"  style="width: 140px; height: 140px;" src="/static/{{i.img}}"/>
+						<h2>{{i.title}}</h2>						
+						<p>{{i.content}}</p>
+						<p>{{i.time|date:"Y-m-d h:i:m"}}</p>
+						<hr />
+						{% for j in i.replay_set.all%}
+						<table>
+							<tr>
+								<div class="span2">
+									<td><img src="/static/{{j.user.u.headImg}}" width="50px" height="50px"/></td>	
+									<td><h5>{{j.user.first_name}}</h5></td>			
+								</div>
+								<div class="span10" id="main3">					
+									<td>{{j.content}}</td>
+									<td>{{j.time|date:"Y-m-d h:i:m"}}</td>
+								</div>
+							</tr>
+						</table>	
+						{% endfor %}		
+					</div>				
+				</div>
+				<hr />
+				{% endfor %}
+				{% for contact in send.paginator.page_range %}
+				&nbsp;
+				{% if contact == send.number%}
+					{{contact}}
+				{% else %}
+					<a href="?page={{contact}}" style="text-decoration:none">{{contact}}</a>
+				{% endif %}
+				{% endfor %}
+				<div class="pagination">
+					<span class="step-links">
+						{% if send.has_previous %}
+							<a href="?page={{send.previous_page_number}}">上一页</a>
+						{% endif %}
+							<span class="current">
+								Page{{send.number}} of {{send.paginator.num_pages}}.
+							</span>
+						{% if send.has_next %}
+							<a href="?page={{send.next_page_number}}">下一页</a>
+						{% endif %}
+					</span>
+				</div>
+			</div>
+{% endblock %}

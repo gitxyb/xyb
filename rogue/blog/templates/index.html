@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="root" >
+
+    <link href="/static/bootstrap-2.3.2/docs/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/bootstrap-2.3.2/docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <style>
+    body {
+      padding-bottom: 40px;
+      color: #5a5a5a;
+      background-color:#E0E0E0
+    }
+    .navbar-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      margin-top: 20px;
+      margin-bottom: -90px; 
+    }
+    .navbar-wrapper .navbar {
+
+    }
+    .navbar .navbar-inner {
+      border: 0;
+      -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+         -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+              box-shadow: 0 2px 10px rgba(0,0,0,.25);
+    }
+    .navbar .brand {
+      padding: 14px 20px 16px;
+      font-size: 16px;
+      font-weight: bold;
+      text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    }
+    .navbar .nav > li > a {
+      padding: 15px 20px;
+    }
+    .navbar .btn-navbar {
+      margin-top: 10px;
+    }
+    .carousel {
+      margin-bottom: 60px;
+    }
+
+    .carousel .container {
+      position: relative;
+      z-index: 9;
+    }
+
+    .carousel-control {
+      height: 80px;
+      margin-top: 0;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      background-color: transparent;
+      border: 0;
+      z-index: 10;
+    }
+
+    .carousel .item {
+      height: 500px;
+    }
+    .carousel img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 500px;
+    }
+
+    .carousel-caption {
+      background-color: transparent;
+      position: static;
+      max-width: 550px;
+      padding: 0 20px;
+      margin-top: 200px;
+    }
+    .carousel-caption h1,
+    .carousel-caption .lead {
+      margin: 0;
+      line-height: 1.25;
+      color: #fff;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    }
+    .carousel-caption .btn {
+      margin-top: 10px;
+    }
+    .marketing .span4 {
+      text-align: center;
+    }
+    .marketing h2 {
+      font-weight: normal;
+    }
+    .marketing .span4 p {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    .featurette-divider {
+      margin: 80px 0; 
+    }
+    .featurette {
+      padding-top: 120px; 
+      overflow: hidden;
+    }
+    .featurette-image {
+      margin-top: -120px; 
+    }
+    .featurette-image.pull-left {
+      margin-right: 40px;
+    }
+    .featurette-image.pull-right {
+      margin-left: 40px;
+    }
+    .featurette-heading {
+      font-size: 50px;
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+    @media (max-width: 979px) {
+
+      .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+      }
+      .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+      }
+
+      .carousel .item {
+        height: 500px;
+      }
+      .carousel img {
+        width: auto;
+        height: 500px;
+      }
+
+      .featurette {
+        height: auto;
+        padding: 0;
+      }
+      .featurette-image.pull-left,
+      .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 40%;
+        margin: 0 auto 20px;
+      }
+    }
+
+
+    @media (max-width: 767px) {
+
+      .navbar-inner {
+        margin: -20px;
+      }
+
+      .carousel {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+      .carousel .container {
+
+      }
+      .carousel .item {
+        height: 300px;
+      }
+      .carousel img {
+        height: 300px;
+      }
+      .carousel-caption {
+        width: 65%;
+        padding: 0 70px;
+        margin-top: 100px;
+      }
+      .carousel-caption h1 {
+        font-size: 30px;
+      }
+      .carousel-caption .lead,
+      .carousel-caption .btn {
+        font-size: 18px;
+      }
+
+      .marketing .span4 + .span4 {
+        margin-top: 40px;
+      }
+
+      .featurette-heading {
+        font-size: 30px;
+      }
+      .featurette .lead {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+    }
+    </style>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/bootstrap-2.3.2/docs/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/bootstrap-2.3.2/docs/assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/bootstrap-2.3.2/docs/assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/static/bootstrap-2.3.2/docs/assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="/static/bootstrap-2.3.2/docs/assets/ico/favicon.png">
+
+    <script src="/static/bootstrap-2.3.2/docs/assets/js/bootstrap-transition.js"></script>
+
+    <script src="/static/bootstrap-2.3.2/docs/assets/js/bootstrap-alert.js"></script>
+    <script src="/static/bootstrap-2.3.2/docs/assets/js/bootstrap-modal.js"></script>
+    <script src="/static/bootstrap-2.3.2/docs/assets/js/bootstrap-dropdown.js"></script>
+    <script src="/static/bootstrap-2.3.2/docs/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="/static/bootstrap-2.3.2/docs/assets/js/bootstrap-tab.js"></script>
+    <script src="/static/bootstrap-2.3.2/docs/assets/js/bootstrap-tooltip.js"></script>
+
+    <script src="/static/bootstrap-2.3.2/docs/assets/js/bootstrap-popover.js"></script>
+    <script src="/static/bootstrap-2.3.2/docs/assets/js/bootstrap-button.js"></script>
+    <script src="/static/bootstrap-2.3.2/docs/assets/js/bootstrap-collapse.js"></script>
+    <script src="/static/bootstrap-2.3.2/docs/assets/js/bootstrap-carousel.js"></script>
+    <script src="/static/bootstrap-2.3.2/docs/assets/js/bootstrap-typeahead.js"></script>
+
+	 <!--<script src="//cdnjs.bootcss.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	 <script src="//cdnjs.bootcss.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>-->
+	 <script src="/static/bootstrap-2.3.2/docs/assets/js/jquery.min.js"></script>
+	 <script src="/static/bootstrap-2.3.2/docs/assets/js/bootstrap.min.js"></script>
+    <script src="/static/bootstrap-2.3.2/docs/assets/js/holder/holder.js"></script>
+    <script>
+		!function ($) {
+ 		$(function(){
+ 		// carousel demo
+ 		$('#myCarousel').carousel()
+ 		})
+ 		}(window.jQuery)
+ 	 </script>
+    <title>主页</title>
+  </head>
+
+  <body>
+		<div class="navbar-wrapper">
+			<div class="container">
+				<div class="navbar navbar-inverse">
+					<div class="navbar-inner">
+						<a class="brand" href="#">游侠吧</a>
+						<div class="nav-collapse collapse">
+							<ul class="nav">
+								<li class="active"><a href="#">主页</a></li>
+								<li><a href="#about" data-toggle="modal">关于我们</a></li>
+								<li id="personHomepage"></li>
+							</ul>
+							<div class="navbar-form pull-right">
+							<table>
+								<tr>
+									<td>							
+										<div id="main1" style="color:red">
+										{% if user.is_authenticated %}
+											<td>
+												<td><img src="/static/{{user.u.headImg}}" width="30px;" height="30px;"/></td>
+												<td><h5 style="margin-top: 10px;color:red;">{{user.first_name}}</h5></td>
+												<td><input type="button" value="与我有关" class="btn btn-success" onclick="location.assign('/post_show/{{user.id}}')"/></td>
+												<td><input type="button" value="我参与的" class="btn btn-success" onclick="location.assign('/replay_user_show/{{user.id}}')"/></td>
+												<td><input type="button" value="发帖" class="btn btn-success" onclick="location.assign('/post/{{user.id}}')"/></td>
+												<td><input type="button" value="说说" class="btn btn-success" onclick="location.assign('/post_show/{{user.id}}')"/></td>														
+											</td>	
+										{% else %}
+											用户名：<input type="text" name="username" id="username" class="span2"/>
+											口令：<input type="password" name="password" id="password" class="span2"/>
+											<input type="button" value="登录" onclick="login()" class="btn btn-success"/>
+											<a href="/regist/" class="btn btn-info" >注册</a>
+										{% endif %}
+										</div>										
+									</td>
+									<td>	
+										<div>
+											<input type="button" value="登出" onclick="location.assign('/logout/')" class="btn btn-warning" />
+										</div>
+									</td>
+								</tr>
+							</table>
+							</div>
+            		</div>	
+          		</div>
+        		</div>
+      	</div> 
+		</div>
+		<div id="about" class="modal" aria-hidden="true" style="display: none;">
+			<div class="modal-header">
+ 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+ 				<h3 id="myModalLabel">关于我们</h3>
+ 			</div>
+			<div class="modal-body">
+				<p>随着人们生活条件的日益改善，人们对生活的享受欲望越来越渴望，在国家这几年的精神文明建设的推动下，越来越多的人，有了更多的时间和金钱走出家门，去享受这美好时代的所带来的自然景观和人文风光。对了，本网站正是本着服务大众的意念而创建的一个关于旅途游记类网站；本站奔着用户至上的态度，将尽心尽力的服务于大众群体，同时也欢迎个“游侠”们对本网站有什么意见或建议，本网站也会虚心接受，不吝赐教。联系邮箱：15210172316@sina.cn</p>
+			</div>
+ 			<div class="modal-footer">
+ 				<button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+ 			</div>
+ 		</div>		
+		<div id="myCarousel" class="carousel slide">
+			<div class="carousel-inner">
+				<div class="item active">
+					<img src="/static/img/1.jpg" alt="">
+        		</div>
+        		<div class="item">
+          		<img src="/static/img/04a03a351c7acaf8a402fd1b2e559560.jpg" alt="">
+        		</div>
+        		<div class="item">
+          		<img src="/static/img/0f02e195db2acf433032179de356050e.jpg" alt="">
+        		</div>
+      	</div>
+      	<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      	<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    	</div>
+	 
+	 	<div class="container marketing">
+			<div class="row">
+				<div>
+					{% for i in posts %}
+					<div class="span4">
+						<img class="img-circle"  style="width: 140px; height: 140px;" src="/static/{{i.img}}/"/>
+						<h2>{{i.title}}</h2>
+						<p>{{i.content}}</p>
+ 					</div>
+ 					{% if forloop.counter|divisibleby:3 %}
+ 				</div>
+ 				<div>
+					{% endif %}
+					{% endfor %} 				
+ 				</div>					
+	 		</div>	 
+	 	</div>
+
+	 <div class="container">
+	 	<hr class="featurette-divider">
+	 	{% for post in posts %}
+	 	<div class="featurette">
+			<img class="featurette-image pull-left" src="/static/{{post.img}}" width="512px" height="512px" />
+			<h2 class="featurette-heading">
+				{{post.title}}
+				<span class="muted"><img src="/static/{{post.user.u.headImg}}" width="50px" height="50px" /></span>						
+			</h2>
+			<p class="lead">{{post.content}}</p>
+			<p>评论：（<a href="/replay_show/{{post.id}}/">{{post.replay_set.count}}</a>）</p>
+			<p>{{post.time|date:"Y-m-d h:m:s"}}</p>
+			<p>
+				<a class="btn btn-primary" href="/replay/{{post.id}}/" data-toggle="modal">回帖 »</a>
+			</p>
+	 	</div>
+	 	<hr class="featurette-divider"/>
+	 	{% endfor %}
+	 	{% for contact in posts.paginator.page_range %}
+		&nbsp;
+			{% if contact == sends.number %}
+				{{contact}}
+			{% else %}
+				<a href="?page={{contact}}" style="text-decoration:none">{{contact}}</a>
+			{% endif %} 
+		{% endfor %}
+		<div class="pagination">
+		<span class="step-links">
+			{% if posts.has_previous %}
+				<a href="?page={{posts.previous_page_number}}">上一页</a>
+			{% endif %}
+			<span class="current">
+				Page{{posts.number}} of {{posts.paginator.num_pages}}.
+			</span>
+			{% if posts.has_next %}
+				<a href="?page={{posts.next_page_number}}">下一页</a>
+			{% endif %}
+		</span>
+		</div>
+	 	<footer>
+			<p class="pull-right">
+				<a href="#">Back to top</a>
+			</p>
+			<p>
+				&copy; 2013 Company, Inc. ·
+				<a href="#">Privacy</a>
+				·
+				<a href="#">Terms</a>
+			</p>
+	 	</footer>
+	 </div>
+ 	 <script>
+		function login(){
+			var username = document.getElementById('username').value;
+			var password = document.getElementById('password').value;
+			hl = new XMLHttpRequest;
+			hl.open("get","/login?username="+username+"&password="+password,true)
+			hl.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+			hl.onreadystatechange = process;
+			hl.send()
+		}
+		function process(){
+			if (hl.readyState == 4 && hl.status == 200){
+				if (hl.responseText != ''){
+					var obj = document.getElementById('main1');
+					var personHomepage = document.getElementById('personHomepage');
+					var responseobj = eval("(" + hl.responseText + ")");
+					obj.innerHTML = responseobj.username;
+					personHomepage.innerHTML  = "<a href='/people_xian/"+responseobj.userid +"'>个人主页</a>"
+				}					
+			}	
+		}
+	</script>
+  </body>
+</html>
